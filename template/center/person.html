@@ -1,0 +1,72 @@
+<style type="text/css">
+    body {
+        background-color: #f1eff8
+    }
+    .item-divider {
+        min-height: 6px;
+        padding-top: 2px;
+    }
+
+    .item-button-right{
+        font-size: 14px;
+        color: #999;
+    }
+    .item-avatar-right .item-content .item-image, .item-avatar-right .item-content>img:first-child, .item-avatar-right .item-image, .item-avatar-right>img:first-child {
+        top:6px;
+    }
+    .item-avatar-right, .item-avatar-right .item-content {
+        min-height: 54px;
+    }
+    .pic{
+        width: 11.5px!important;
+        height: 20px!important;
+    }
+</style>
+<ion-header-bar class="bar bar-positive">
+    <i class="item-thumbnail-left" ng-click="$ionicGoBack()">
+        <img src="images/left.png" alt="" class="pic">
+    </i>
+    <h1 class="title">个人资料</h1>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-item class="item-avatar-right">
+            <img src="images/0.jpg" alt=""style="vertical-align: middle">
+            头像
+        </ion-item>
+        <ion-item class="item-button-right">
+            昵称
+            <button class="button button-clear button-dark " style="font-size:12px;">一朵阳光花
+                <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+        </ion-item>
+        <ion-item class="item-button-right">
+            地区
+            <button class="button button-clear button-dark " style="font-size:12px;">河南省郑州市金水区
+                <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+        </ion-item>
+        <ion-item class="item-button-right">
+            所在学校
+            <button class="button button-clear button-dark " style="font-size:12px;">郑州大学
+                <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+        </ion-item>
+        <ion-item class="item-button-right">
+            是否有普通话证
+            <button class="button button-clear button-dark " style="font-size:12px;">是
+                <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right">
+            地址管理
+            <button class="button button-clear button-dark " style="font-size:12px;">
+                <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+        </ion-item>
+        <ion-item class="item-button-right">
+            修改密码
+            <button class="button button-clear button-dark " style="font-size:12px;">
+                <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+        </ion-item>
+    </ion-list>
+</ion-content>
+</body>

@@ -1,0 +1,127 @@
+    <style type="text/css">
+        .item {
+            width: 100%;
+            padding: 0px;
+        }
+        .pic1{
+            width: 100%;
+            height: 100%;
+        }
+        .pic2{
+            width: 2%;
+        }
+        .mony{
+            color: orange;
+            font-size: 24px;
+        }
+        ul li{
+            float: left;
+            width: 33%; 	font-size: 95%;
+        }
+        .tul{
+            width: 100%;
+        }
+        .tul li{
+            width: 33%;
+        }
+        .tul li a{
+            display: inline-block;
+            width: 33%;
+            font-size: 95%;
+        }
+        .button-bar{
+            margin-top: 15px;
+        }
+        .pic3{
+            width: 90%;
+            height: 100%;
+            margin-left: 5%;
+        }
+        .pic4{
+            width: 90%;
+            height: 100%;
+            margin-left: 5%;
+        }
+        .tab-item .icon {
+            display: block;
+            margin: 0 auto;
+            height: 32px;
+            font-size: 32px;
+        }
+        .tabs-icon-top>.tabs .tab-item:last-child {
+            line-height: 50px;
+            color:white ;
+            background: red;
+        }
+        .ta{
+            line-height: 50px;
+            color:white ;
+            padding-top:20px;
+            background: orange;
+        }
+        .item p {
+			    margin-left: 25px;
+			    color: #FF0000;
+		}
+		.item p img {
+    			width: 12px;
+    	}
+    </style>
+
+<button class="button-energized"></button>
+<ion-header-bar class="bar-positive">
+    <button class="button button-clear" ui-sref="^.book"><i class="icon  ion-chevron-left"></i></button>
+    <h1 class="title">商品详情</h1>
+    <button class="button button-clear" ><i class="icon ion-ios-cart-outline"></i></button>
+</ion-header-bar>
+<ion-content class="has-header">
+    <ion-list>
+        <ion-item>
+            <img src="img/pic.png" class="pic1"/>
+        </ion-item>
+        <ion-item class="item-thumbnail-left">
+            <p>大学英语四级私人订制【18课时】星火式快速记忆法<br />，掌握六级词汇的奥义</p>
+            <p><img src="img/star.png"/><img src="img/star.png"/>
+                <img src="img/star.png"/><img src="img/star.png"/>
+                <img src="img/star.png"/>   评分：5分</p>
+            <p>价格：<span class="mony">￥120   </span>原价格：￥234 </p>
+            <p><ul>
+            <li>快递：免运费</li>
+            <li>月销：35235件</li>
+            <li>库存：566本</li>
+        </ul></p>
+        </ion-item>
+        <iom-item><br />
+            卖家承诺72小时内发货     8天退货，邮费由买家承担
+        </iom-item>
+    </ion-list>
+
+    <div class="button-bar bar-light">
+        <button class="button button-light button-assertive">图文详情</button>
+        <button class="button button-light">产品参数</button>
+        <button class="button button-light">宝贝评价</button>
+    </div>
+    <ion-list>
+        <ion-item>
+            <img src="img/pic1.png" alt="" class="pic3"/>
+        </ion-item>
+        <ion-item>
+            <img src="img/pic2.png" alt="" class="pic4"/>
+        </ion-item>
+        <iom-item>
+            <p>《四级英语》对于一个不是热爱英语的学生来说，实在是头疼，作为一个
+                同样不是很热衷英语的人来说，感觉口语比笔试重要，大多数的学生记单词，背语法
+                课文，但貌似所有的中国学校都是从来认为笔试的成绩证明一切。话说回来，我一个初中
+                外国来的同学，考试英语从来就是读一遍觉得顺口就选择了，从来没考虑过语法，
+                对他来说那太复杂了。后来我发现，同学中很多过四六级的英语，口语真的不敢恭维
+                ，简直了，倒是那些不好好学英语的，但整天看美剧，电影，听英文歌的，用英文骂起来人，或表达感情时却那么流利自然</p>
+        </iom-item>
+    </ion-list>
+</ion-content>
+<!--<ion-tabs class="tabs-color-positive tabs-icon-top ">-->
+    <!--<ion-tab title="分享" icon-on="ion-share" icon-off="ion-share"></ion-tab>-->
+    <!--<ion-tab title="客服" icon-on="ion-social-reddit-outline" icon-off="ion-social-reddit-outline"></ion-tab>-->
+    <!--<ion-tab title="收藏" icon-on="ion-pricetag" icon-off="ion-pricetag"></ion-tab>-->
+    <!--<ion-tab  title="加入购物车" class="ta" style="color: white;"></ion-tab>-->
+    <!--<ion-tab  title="立即购买" ></ion-tab>-->
+<!--</ion-tabs>-->

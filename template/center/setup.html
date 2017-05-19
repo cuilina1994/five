@@ -1,0 +1,114 @@
+<style type="text/css">
+    body {
+        background-color: #f1eff8
+    }
+
+    #row_a>div:first-child{
+        padding-top: 8px;
+    }
+    #row_a>div:first-child>img{
+        width: 24px;
+    }
+    #row_a>div:nth-child(3)>img{
+        width: 28px;
+    }
+    .itembutton>img{
+        width: 30px;
+        vertical-align: middle;
+    }
+    .itembutton i{
+        padding-top: 6px;
+        padding-left: 11px;
+    }
+    .item{
+        padding: 7px 16px;
+    }
+    .tab-item i.icon {
+        margin-top: 1px;
+    }
+    .item-divider {
+        min-height: 6px;
+        padding-top: 2px;
+    }
+    .item-button-right .item-content>.button, .item-button-right .item-content>.buttons, .item-button-right>.button, .item-button-right>.buttons{
+        top:0;
+    }
+    .pic{
+        width: 11.5px!important;
+        height: 20px!important;
+    }
+</style>
+<ion-header-bar class="bar bar-positive" align-title="center">
+    <i class="item-thumbnail-left" ng-click="$ionicGoBack()">
+        <img src="images/left.png" alt="" class="pic">
+    </i>
+    <h1 class="title">设置</h1>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-item class="item-button-right itembutton" ui-sref="^.person">
+            <img src="images/35.png" alt="" style="width: 30px;height: 30px;">
+            <span>个人资料</span>
+            <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right itembutton">
+            <img src="images/36.png" alt="">
+            <span>帮助中心</span>
+            <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right itembutton ">
+            <img src="images/37.png" alt="">
+            <span>清理缓存</span>
+            <button class="button button-clear button-dark" style="font-size:12px;">21M<i
+                    class="icon ion-ios-arrow-right"></i></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right itembutton">
+            <img src="images/38.png" alt="">
+            <span>关于我们</span>
+            <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right itembutton">
+            <img src="images/39.png" alt="">
+            <span>版本更新</span>
+            <button class="button button-clear button-dark"style="font-size:12px;">6.1<i class="icon ion-ios-arrow-right"></i></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right itembutton ">
+            <img src="images/40.png" alt="">
+            <span>意见反馈</span>
+            <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+        </ion-item>
+
+        <ion-item class="item-divider"></ion-item>
+
+        <ion-item class="item-button-right itembutton item-toggle">
+            <img src="images/41.png" alt="">
+            <span>夜间模式</span>
+            <label class="toggle toggle-balanced">
+                <input type="checkbox">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </ion-item>
+        <ion-item style="background-color: #f1eff8;border: none;padding-bottom: 5px">
+            <button class="button button-block" style="
+            background-color: #f90;margin: auto;color: #fff">退出当前账号
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

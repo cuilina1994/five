@@ -1,0 +1,46 @@
+    <style type="text/css">
+        .item-thumbnail-left, .item-thumbnail-left .item-content {
+            padding-top: 8px;
+            padding-left: 106px;
+            border-radius:10px ;
+            margin-bottom: 20px;
+            height: 40px;
+        }
+        .item-thumbnail-left>img:first-child {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-width: 30px;
+            max-height: 31px;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 10px;
+            }
+        .ion-chevron-right{
+            float: right;
+            
+            padding-top: 29px;
+        }
+    </style>
+<ion-header-bar class="bar-positive" align-title="center">
+    <h1 class="title">我的任务</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="list list-inset">
+        <ion-item ui-sref="^.video" class="item-thumbnail-left ">
+            <img src="images/myvideo.png"/>
+           <span style="font-size: 23px;line-height: 77px;">我的视频</span>
+            <a class="ion-chevron-right "></a>
+        </ion-item>
+        <ion-item ui-sref="^.study" class="item-thumbnail-left">
+            <img src="images/mystudy.png"/>
+            	<span style="font-size: 23px;line-height: 77px;">我的学习</span>
+            <a class="  ion-chevron-right "></a>
+        </ion-item>
+        <ion-item ui-sref="^.zuoti" class="item-thumbnail-left">
+            <img src="images/myzuoti.png"/>
+            <span style="font-size: 23px;line-height: 77px;">我的做题</span>
+            <a class="  ion-chevron-right "></a>
+        </ion-item>
+    </div>
+</ion-content>

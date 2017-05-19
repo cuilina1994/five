@@ -1,0 +1,51 @@
+
+    <style>
+        body{
+            background-color: #F1EFF8;
+        }
+     .myItem{
+         width: 350px;
+         height: 50px;
+         margin: 8px auto;
+         border-radius: 10px;
+     }
+     .item:first-child{
+         color: blue;
+     }
+        .myItem img{
+            width: 40px;
+        }
+        .item{
+            padding: 5px 3px 0 5px;
+            line-height: 38px;
+        }
+        .myspan{
+            left: 10px;
+         position: relative;
+            top:-14px;
+        }
+
+        .myItem i{
+            float: right;
+            margin-right: 5px;
+        }
+    </style>
+<ion-header-bar class="bar-positive">
+    <button class=" button button-clear icon ion-ios-arrow-left" ui-sref="^.center"></button>
+    <h2 class="title">我的题库</h2>
+</ion-header-bar>
+<!--中间内容-->
+<ion-content>
+    <ion-list>
+        <ion-item class="myItem">
+            <img src="img/page1-01.png" alt="">
+          <span class="myspan"  ui-sref="^.jilu">做题记录</span>
+           <i class="icon ion-chevron-right my_left"></i>
+        </ion-item>
+        <ion-item class="myItem">
+            <img src="img/page1-02.png" alt="">
+           <span class="myspan" ui-sref="index18">我的错题集</span>
+            <i class="icon ion-chevron-right my_left"></i>
+        </ion-item>
+    </ion-list>
+</ion-content>

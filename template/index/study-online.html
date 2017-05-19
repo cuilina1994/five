@@ -1,0 +1,128 @@
+    <style>
+        body{
+            background-color: #fff;
+        }
+        .item-thumbnail-left, .item-thumbnail-left .item-content{
+            min-height: 0px;
+        }
+        .item-thumbnail-right, .item-thumbnail-right .item-content{
+            min-height: 0px;
+        }
+        .button{
+            line-height: 20px;
+        }
+        .pic{
+            width: 11.5px!important;
+            height: 20px!important;
+        }
+        .title{
+            font-size: 24px!important;
+        }
+        .btn1{
+            font-size: 14px;
+            color: orange;
+            float: right;
+        }
+        .span1{
+            width: 90%;
+            text-indent: 28px;
+            display: block;
+            margin: auto;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .p1{
+            width: 90%;
+            margin: 20px auto 0;
+            text-indent: 24px;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .p2{
+            width: 90%;
+            margin: 20px auto 0;
+            text-indent: 24px;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .iote{
+            padding: 10px 0 0 0;
+            margin-top: 20%;
+        }
+        .btnn1{
+            color: #0997f8;
+            margin-left: 5%;
+            width: 24%;
+            margin-top: 25px;
+        }
+        .btnn2{
+            color: #0997f8;
+            margin-left: 8%;
+            width: 26%;
+            margin-top: 25px;
+  		}
+        .btnn3{
+            color: #fff;
+            margin-left: 8%;
+            width: 26%;
+            margin-bottom: 0;
+            /*margin-top: 10px;*/
+            font-size: 10px;
+            margin-top: 22px;
+			}
+        .im{
+            width: 17px!important;
+            height: 16.5px!important;
+            margin-top: 4px!important;
+        }
+        .kefu{
+            color: #fff!important;
+        }
+        .dott{
+            width: 90%;
+            height: 1px;
+            border-top: 1px dotted #ccc;
+            margin: 0% auto 0;
+        }
+    </style>
+<ion-header-bar class="bar-calm" align-title="center">
+    <i class="item-thumbnail-left" ng-click="$ionicGoBack()">
+        <img src="images/left.png" alt="" class="pic">
+    </i>
+    <h1 class="title">在线学习</h1>
+</ion-header-bar>
+<ion-content class="has-header">
+    <ion-list>
+        <div align="center">
+            <button class="button button-light">报考会计证基本要求</button>
+        </div>
+        <button class="button button-light">会计学习总结：</button>
+        <button class="button button-light btn1">视频解析》</button>
+        <div class="dott"></div>
+        <br/>
+        <span class="span1"> 会计从业资格证考试科目为：  财经法规与会计职业道德 、会计基础、初级会计电算化。</span>
+        <p class="p1">
+            会计从业资格考试是由国家财政部组织的全国性考试，
+            一般由省级财政部门组织 ，考试及报考时间全国各省有差异。
+            该考试实行全国统一大纲，各地自行编制教材及安排考试时间的政策，
+            考试大多涉及    《财经法规与职业道德》、《会计基础与实务》
+            （或为《会计实务》 与  《会计基础知识》）、《初级会计电算化》，
+            考试通过后可获得会计从业资格证书。
+        </p>
+        <p class="p2">
+            《会计从业资格证书》[2]是具有一定会计专业知识和技能的人员从事
+            会计工作的资格证书，是从事会计工作必须具备的基本要求和前提条件，
+            是证明能够从事会计工作的唯一合法凭证，是进入会计岗位的“准入证”，
+            是从事会计工作的必经之路。它是一种资格证书，是会计工作的“上岗证”，
+            不分级。
+        </p>
+        <ion-item class="iote">
+            <button class="button button-outline button-calm btnn1" ui-sref="^.ml">目录</button>
+            <button class="button button-outline button-calm btnn2">章节练习</button>
+            <button class="button button-energized btnn3">
+                <img src="images/weixin2.png" alt="" class="im">
+                <p class="kefu">在线客服</p>
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

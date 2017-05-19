@@ -1,0 +1,17 @@
+<ion-tabs class="tabs-light tabs-icon-top" ng-class="{'tabs-item-hide':$root.hideTabs}">
+    <ion-tab title="首页"  icon-on="ion-chatboxes" ui-sref=".search" icon-off="ion-chatboxes">
+        <ion-nav-view name="searchview"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="我的任务" icon-on="ion-person-stalker" ui-sref=".renwu" icon-off="ion-person-stalker">
+        <ion-nav-view name="renwuview"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="免费资料" icon-on="ion-ios-search" ui-sref=".free1" icon-off="ion-ios-search">
+        <ion-nav-view name="free1view"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="个人中心" icon-on="ion-person" ui-sref=".center" icon-off="ion-person">
+        <ion-nav-view name="centerview"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

@@ -1,0 +1,213 @@
+<style>
+    .bar.item-input-inset .item-input-wrapper {
+        background: #fff;
+        border-radius: 15px;
+        margin-left: 10px;
+    }
+
+    .bar.item-input-inset .item-input-wrapper input {
+        background: #fff;
+        color: #ccc;
+        border-radius: 15px;
+    }
+
+    .bar.item-input-inset .item-input-wrapper i {
+        color: #ccc;
+    }
+
+    #banner {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0px;
+    }
+
+    .col {
+        width: 50%;
+        padding: 0px;
+        text-align: center;
+        padding-top: 6px;
+    }
+
+    .navOne {
+        margin-top: -6px;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    .ban-fir {
+        border-right: 1px solid #cccccc;
+    }
+
+    .row + .row {
+        padding-top: 5px;
+    }
+
+    .hotone p {
+        line-height: 30px;
+    }
+
+    .hotone .button {
+        background: orange;
+        color: #fff;
+        outline: none;
+        float: right;
+        min-height: 28px;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .item {
+        border-style: none;
+    }
+
+    .item h2 {
+        line-height: 31px;
+        border-bottom: 1px dashed #cccccc;
+    }
+
+    .topimg img {
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .hotbook {
+        padding-left: 120px;
+        position: relative;
+        height: 130px;
+    }
+
+    .hotbook i {
+        width: 100px;
+        height: 130px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: url("images/book.png") no-repeat;
+        background-size: 100%;
+    }
+
+    .hotbook .star {
+        margin-top: 15px;
+        color: orange;
+    }
+
+    .hotbook .price {
+        margin-top: 15px;
+    }
+
+    .hotbook .price > span:first-child {
+        color: red;
+    }
+
+    .hotbook .price > span:last-child {
+        margin-left: 25px;
+    }
+
+    .hotbook img {
+        margin-right: 10px;
+        height: 14px;
+    }
+
+    .hotvideo {
+        padding-left: 120px;
+        position: relative;
+    }
+
+    .hotvideo i {
+        width: 100px;
+        height: 130px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: url("images/pic1.png") no-repeat;
+        background-size: 100%;
+    }
+
+    ion-footer-bar.bar {
+        height: 55px;
+    }
+
+    ion-footer-bar a {
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        color: #444;
+    }
+
+    ion-footer-bar a img {
+        height: 20px;
+    }
+</style>
+
+<ion-view view-title="首页">
+    <ion-header-bar class="bar-positive item-input-inset">
+        <button class="button button-clear icon icon-right ion-android-arrow-dropdown">郑州</button>
+        <label class="item-input-wrapper">
+            <input type="search" placeholder="找什么呢？搜索试试吧">
+            <i class="icon ion-ios-search"></i>
+        </label>
+    </ion-header-bar>
+    <ion-content class="content">
+        <img src="images/banner.png" alt="" id="banner">
+        <div class="row navOne">
+            <div class="col ban-fir">
+            <span>
+                <img src="images/movie.png" alt="">
+                <p>课件视频</p>
+            </span>
+            </div>
+            <div class="col">
+            <span ui-sref="^.study-online">
+                <img src="images/edu.png" alt="">
+                <p>在线学习</p>
+            </span>
+            </div>
+        </div>
+        <div class="row navTwo">
+            <div class="col ban-fir">
+            <span ui-sref="^.ku">
+                <img src="images/note.png" alt="">
+                <p>宏鹏题库</p>
+            </span>
+            </div>
+            <div class="col">
+            <span ui-sref="^.book">
+                <img src="images/book2.png" alt="">
+                <p>图书商城</p>
+            </span>
+            </div>
+        </div>
+        <ion-list>
+            <ion-item class="item-divider"></ion-item>
+            <ion-item class="hotone">
+                <h2 class="title topimg"><img src="images/hot1.png" alt="">火热试题</h2>
+                <p>2016年国家公务员《考前大模拟》通关训练试题</p>
+                <span>2016-02-27</span>
+                <button class="button">开始做题</button>
+            </ion-item>
+            <ion-item class="item-divider"></ion-item>
+            <ion-item class="hotone">
+                <h2 class="title topimg"><img src="images/hot.png" alt="">热卖图书</h2>
+                <div class="hotbook">
+                    <i></i>
+                    <p>2015考研思想政治理论复习全书2015考研思想政治</p>
+                    <p class="star"><span><img src="images/star.png" alt="">5.0分</span></p>
+                    <p class="price"><span>价格:￥228.96</span><span>678人付款</span></p>
+                </div>
+            </ion-item>
+            <ion-item class="item-divider"></ion-item>
+            <ion-item class="hotone">
+                <h2 class="title topimg"><img src="images/video.png" alt="">视频推荐专区</h2>
+                <div class="hotvideo">
+                    <i></i>
+                    <p>实战移动互联网营销:互联网+营销的7个关键要素</p>
+                    <p class="price"><span>2369人已试听</span>
+                        <button class="button">免费试听</button>
+                    </p>
+                </div>
+            </ion-item>
+            <ion-item class="item-divider"></ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

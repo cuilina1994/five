@@ -1,0 +1,174 @@
+<style type="text/css">
+    body {
+        background-color: #f1eff8
+    }
+
+    #button_a{
+        color: #f90;
+        width: 80px;
+        font-size: 12px;
+        top: 18px;
+        right: 7px;
+    }
+    .row{
+        padding: 0;
+    }
+    .item-divider{
+        min-height: 14px;
+    }
+    #row_a>div>img{
+        width: 30px;
+    }
+    #row_a>div:first-child{
+        padding-top: 8px;
+    }
+    #row_a>div:first-child>img{
+        width: 24px;
+    }
+    #row_a>div:nth-child(3)>img{
+        width: 28px;
+    }
+    #row_a>div:nth-child(4)>img{
+        width: 24px;
+    }
+    #row_a>div{
+        text-align: center;
+        font-size: 12px;
+    }
+    #ionitem_a{
+        border-bottom: dotted 1px #ccc;
+    }
+    #ionitem_b{
+        border-top: dotted 1px #ccc;
+    }
+    .itembutton>img{
+        width: 30px;
+        vertical-align: middle;
+    }
+    .itembutton i{
+        padding-top: 6px;
+        padding-left: 11px;
+    }
+
+
+    .tab-item i.icon {
+        margin-top: 1px;
+    }
+    .bar-home-on {
+        background: url(images/bar-home.png) no-repeat center top
+    }
+
+    .bar-home-off {
+        background: url(images/bar-home-off.png) no-repeat center top
+    }
+
+</style>
+        <ion-header-bar class="bar bar-positive">
+            <button class="button button-clear "><i class="icon ion-ios-arrow-left"></i></button>
+            <h1 class="title">个人中心</h1>
+            <button class="button button-clear " ui-sref="^.setup">设置</button>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item class="item-avatar item-button-right " style="border: none">
+                    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1049887587,1702963085&fm=23&gp=0.jpg"
+                         alt="">
+                    <h2>一朵阳光花</h2>
+                    <span>我的积分：569</span>
+                    <button class="button button-clear " id="button_a"><img src="images/12.png" alt=""
+                                                                            style="width: 20px;margin-right: 5px">点击签到
+                    </button>
+                </ion-item>
+                <ion-item class="item-divider"></ion-item>
+                <ion-item style="border-bottom: dotted 1px #ccc" class="item-button-right">
+                    我的订单
+                    <button class="button button-clear button-dark " style="font-size:12px;">查看全部订单
+                        <span class="icon ion-ios-arrow-right" style="margin-left: 5px;"></span></button>
+                </ion-item>
+                <ion-item id="ionitem_a">
+                    <div class="row" id="row_a">
+                        <div class="col col-25"><img src="images/13.png" alt="">
+                            <p>待付款</p></div>
+                        <div class="col col-25"><img src="images/14.png" alt="">
+                            <p>待发货</p></div>
+                        <div class="col col-25"><img src="images/15.png" alt="">
+                            <p>待收货</p></div>
+                        <div class="col col-25" ui-sref="^.dingdan"><img src="images/16.png" alt="">
+                            <p>待评价</p></div>
+                    </div>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/17.png" alt="">
+                    <span ui-sref="^.shopcard">我的购物车</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+
+                <ion-item class="item-divider"></ion-item>
+
+                <ion-item class="item-button-right itembutton ">
+                    <img src="images/18.png" alt="">
+                    <span>当前考试</span>
+                    <button class="button button-clear button-dark" style="font-size:12px;">教师资格证<i
+                            class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/19.png" alt="">
+                    <span>在线报班</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/20.png" alt="">
+                    <span>我的收藏</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+
+                <ion-item class="item-divider"></ion-item>
+
+                <ion-item class="item-button-right itembutton ">
+                    <img src="images/21.png" alt="">
+                    <span>我的视频</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/22.png" alt="">
+                    <span>视频记录</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/23.png" alt="">
+                    <span ui-sref="^.tiku">我的题库</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/24.png" alt="">
+                    <span>我的电子书</span>
+                    <button class="button button-clear button-dark"  ui-sref="^.dianzishu"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+
+                <ion-item class="item-divider"></ion-item>
+
+                <ion-item class="item-button-right itembutton" ng-click="share($event)">
+                    <img src="images/25.png" alt="">
+                    <span>分享好友</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/26.png" alt="">
+                    <span>消息中心</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/27.png" alt="">
+                    <span>校区查询</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+                <ion-item class="item-button-right itembutton">
+                    <img src="images/28.png" alt="">
+                    <span>我的排行榜</span>
+                    <button class="button button-clear button-dark"><i class="icon ion-ios-arrow-right"></i></button>
+                </ion-item>
+
+                <ion-item class="item-divider"></ion-item>
+
+            </ion-list>
+        </ion-content>

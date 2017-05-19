@@ -1,0 +1,162 @@
+    <style>
+        .lis{
+            width: 100%;
+            height: 100%;
+        }
+        .lis li{
+            width: 50%;
+            border-right: 1px solid #ccc;
+            display: block;float: left;
+            text-align: center;
+        }
+        .lis li:nth-child(2){
+            border-right: none;
+            text-align: center;
+        }
+        body{
+            background-color: #F1EFF8;
+        }
+        .lis li button{
+            font-size: 14px!important;
+        }
+        .lis li button img{
+            width: 9px;
+            height: 4.5px;
+        }
+        .qb{
+            color: #66BEF8!important;
+        }
+        .year{
+            color: #000!important;
+        }
+        .p2 span{
+            font-size: 12px!important;
+            color: #ccc;
+        }
+        .p2 span:nth-child(1){
+            width: 4px;
+            height: 20px;
+            background-color: #FF9900;
+            display: inline-block;
+        }
+        .p2 span:nth-child(2){
+            margin-left: 20px;
+            position: absolute;
+            color: #333;
+            font-size: 16px;
+        }
+        .p2 span:nth-child(3){
+            margin-left: 60px;
+        }
+        .btn1{
+            float: right;
+            width: 50px!important;
+            height: 22px!important;
+            line-height: 22px;
+            text-align: center;
+            color: #fff!important;
+            background-color: #FF9900;
+        }
+        .top{
+            margin: 10px 0 40px 0!important;
+        }
+        .picc{
+            width: 11.5px!important;
+            height: 24px!important;
+        }
+        .title{
+            font-size: 24px!important;
+        }
+        .iom{
+            padding: 2px!important;
+        }
+    </style>
+<ion-header-bar class="bar-positive">
+    <i class="item-thumbnail-left" ui-sref="^.ku">
+        <img src="images/left.png" alt=""class="picc">
+    </i>
+    <h1 class="title">章节练习</h1>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-item class="iom">
+            <ul class="lis">
+                <li>
+                    <button class="button button-clear qb">全部学段
+                        <img src="images/xsan.png" alt="">
+                    </button>
+                </li>
+                <li>
+                    <button class="button button-clear year" >年份
+                        <img src="images/san.png" alt="">
+                    </button>
+                </li>
+            </ul>
+        </ion-item>
+    </ion-list>
+    <div class="list top">
+        <a href="" class="item" ui-sref="^.lianxi">
+            <p class="p2">
+                <span></span>
+                <span>第一章 绪论</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第二章 儿童发展的基础</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第三章 儿童感知觉、注意的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第四章 儿童记忆的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第五章 儿童想想、思维的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第六章 儿童言语的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第七章 儿童情绪的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第八章 儿童社会性的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+        <a href="" class="item">
+            <p class="p2">
+                <span></span>
+                <span>第九章 儿童个性的发展</span>
+                <span class="btn1">做题</span>
+            </p>
+        </a>
+    </div>
+</ion-content>

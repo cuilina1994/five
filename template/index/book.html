@@ -1,0 +1,213 @@
+    <style>
+        .pic{
+            width: 11.5px!important;
+            height: 20px!important;
+        }
+        .tit{
+
+        }
+        .pic2{
+            width: 80%;
+            height: 80%;
+            margin: 5px auto;
+            position: relative;
+        }
+        .item-thumbnail-left, .item-thumbnail-left .item-content{
+            padding-left: 28px;
+        }
+        .inp{
+            color: #000!important;
+            width: 50%!important;
+            height: 25px!important;
+            line-height: 25px!important;
+            margin-top: -50px;
+            border-radius: 10px!important;
+            left: 17%;
+            position: absolute;
+        }
+        .pic3{
+            position: absolute;
+            top: 14px;
+            right: 14%;
+            height: 16px;
+        }
+        .lis{
+            width: 100%;
+            height: 100%;
+        }
+        .lis li{
+            width: 33.3%;
+            border-right: 1px solid #ccc;
+            display: block;float: left;
+            text-align: center;
+        }
+        .lis li:nth-child(3){
+            border-right: none;
+            text-align: center;
+        }
+        body{
+            background-color: #F1EFF8;
+        }
+        .lis li button{
+            font-size: 14px!important;
+        }
+        .lis li button img{
+            width: 9px;
+            height: 4.5px;
+        }
+        .qb{
+            color: #66BEF8!important;
+        }
+        .km{
+            color: #000!important;
+        }
+        .year{
+            color: #000!important;
+        }
+        .item h2 {
+            margin: 0 0 2px 85px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .item p{
+            margin-left: 85px;
+            color: #FF0000;
+        }
+        .item p img{
+            width: 100.5px;
+        }
+        .item p span{
+            position: absolute;
+            right: 10px;
+            color: #999;
+        }
+        .card, .list-inset{
+            margin: 20px 0px;
+        }
+        .more{
+            text-align: center;
+            margin-top: 10px;
+            color: #999;
+        }
+        .popover-open .popover, .popover-open .popover-backdrop{
+            width: 100%!important;
+        }
+        .platform-ios .popover{
+            border-radius: 0;
+        }
+        ion-popover-view{
+            left: 0;
+        }
+        .modal-backdrop, .modal-backdrop-bg {
+            position: fixed;
+            top: 14%;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 40%;
+        }
+        .bor{
+            border-style: none!important;
+        }
+    </style>
+<ion-header-bar class="bar-calm" align-title="center">
+    <i class="item-thumbnail-left" ui-sref="^.search">
+        <img src="images/left.png" alt="" class="pic">
+    </i>
+    <span class="tit">
+        <span class="title">
+            <img src="img/inp.png" alt="" class="pic2">
+            <input type="text" placeholder="找什么呢？搜索试试吧" class="inp">
+            <img src="img/search.png" alt="" class="pic3">
+        </span>
+    </span>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-item  style="padding: 2px">
+            <ul class="lis">
+                <li>
+                    <button class="button button-clear qb" ng-click="openModal()">科目
+                        <img src="img/xsan.png" alt="">
+                    </button>
+                </li>
+                <li>
+                    <button class="button button-clear year" >销量
+                        <img src="img/san.png" alt="">
+                    </button>
+                </li>
+                <li>
+                    <button class="button button-clear km">价格
+                        <img src="img/san.png" alt="">
+                    </button>
+                </li>
+            </ul>
+        </ion-item>
+        <div class="list list-inset">
+            <a class="item item-thumbnail-left"ui-sref="^.details">
+                <img src="img/book1.png">
+                <h2>《牵着蜗牛散步》王一梅童话系列 注音版一<br/>
+                    年级课外书二年级必读</h2>
+                <p class="word">价格：￥58元</p>
+                <p style="color: #000">
+                    <img src="img/five.png" alt="">
+                    <span>6938人已付款</span>
+                </p>
+            </a>
+            <a class="item item-thumbnail-left" href="#">
+                <img src="img/book2.png">
+                <h2>《玛蒂的勇气》冰心奖获奖系列儿童文学 少<br/>
+                    年励志小说馆第四辑全6册</h2>
+                <p class="word">价格：￥69.32元</p>
+                <p style="color: #000">
+                    <img src="img/four.png" alt="">
+                    <span>6938人已付款</span>
+                </p>
+            </a>
+            <a class="item item-thumbnail-left" href="#">
+                <img src="img/book3.png">
+                <h2>《《一切安排都恰到好处 》两色风景作品 亿万<br/>
+                    阅读 千万点赞 散文随笔 现当代随笔 </h2>
+                <p class="word">价格：￥58元</p>
+                <p style="color: #000">
+                    <img src="img/five.png" alt="">
+                    <span>2369人已付款</span>
+                </p>
+            </a>
+            <a class="item item-thumbnail-left" href="#">
+                <img src="img/book4.png">
+                <h2>龙应台作品集：目送+野火集+亲爱的安德烈<br/>
+                    +孩子你慢慢来</h2>
+                <p class="word">价格：￥58元</p>
+                <p style="color: #000">
+                    <img src="img/four.png" alt="">
+                    <span>636人已付款</span>
+                </p>
+            </a>
+        </div>
+    </ion-list>
+    <div class="more">加载更多</div>
+</ion-content>
+    <script type="text/ng-template" id="modal">
+        <div class="modal" ng-click="back()">
+            <ion-content>
+                <ion-list>
+                    <ion-item class="bor">
+                        <span>教育类</span>
+                    </ion-item>
+                    <ion-item>
+                        <span>生活类</span>
+                    </ion-item>
+                    <ion-item>
+                        <span>百科类</span>
+                    </ion-item>
+                    <ion-item>
+                        <span>司法类</span>
+                    </ion-item>
+                    <ion-item>
+                        <span>名著类</span>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </div>
+    </script>

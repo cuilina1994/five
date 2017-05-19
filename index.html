@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="js/lib/ionic/css/ionic.min.css">
+    <script src="js/lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="js/book.js"></script>
+</head>
+<body>
+<ion-nav-view></ion-nav-view>
+</body>
+<script>
+    var app = angular.module("myApp", ["ionic", "ui.router"]);
+     app.directive('hideTabs', function($rootScope){
+        return {
+            restrict: 'A',
+            link: function (scope, element, attributes) {
+                scope.$on('$ionicView.beforeEnter', function () {
+                    scope.$watch(attributes.hideTabs, function (value) {
+                        $rootScope.hideTabs = value;
+                    });
+                });
+                scope.$on('$ionicView.beforeLeave', function () {
+                    $rootScope.hideTabs = false;
+                });
+            }
+        }
+    })
+    app.config(["$stateProvider","$urlRouterProvider","$ionicConfigProvider", function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+        // 解决android手机tabs选项卡刷新后出现在浏览器上边的问题
+        $ionicConfigProvider.platform.ios.tabs.style('standard');
+        $ionicConfigProvider.platform.ios.tabs.position('bottom');
+        $ionicConfigProvider.platform.android.tabs.style('standard');
+        $ionicConfigProvider.platform.android.tabs.position('standard');
+
+        $ionicConfigProvider.platform.ios.navBar.alignTitle('center');
+        $ionicConfigProvider.platform.android.navBar.alignTitle('left');
+
+        $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios-arrow-thin-left');
+        $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');
+
+        $ionicConfigProvider.platform.ios.views.transition('ios');
+        $ionicConfigProvider.platform.android.views.transition('android');
+        /* *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * */
+        //配置访问的默认页面
+        $urlRouterProvider.otherwise("/tabs");
+
+        // 配置路由状态
+        $stateProvider
+            .state({
+                name:"tabs",
+                url:"/tabs",
+                templateUrl:"template/tabs.html"
+            })
+            .state({
+                name:"tabs.search",
+                url:"/search",
+                views:{
+                    "searchview":{
+                        templateUrl:"template/index/search.html",
+                        controller:["$scope", "$ionicPopover", function($scope, $ionicPopover) {
+
+//                                    $ionicPopover.fromTemplateUrl("temp/part-index/dialog/ability.html",{
+//                                        scope:$scope
+//                                    }).then(function(modal) {
+//                                        $scope.dialog = modal;
+//                                    });
+//
+//                                    $scope.ability = function(e) {
+//                                        $scope.dialog.show(e);
+//                                    }
+                        }]
+                    }
+                }
+            })
+                    .state({
+                        name:"tabs.study-online",
+                        url:"/study-online",
+                        params:{name:null},
+                        views:{
+                            "searchview": {
+                                templateUrl:"template/index/study-online.html"
+                            }
+                        }
+                    })
+            .state({
+                name:"tabs.book",
+                url:"/book",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/book.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.details",
+                url:"/details",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/details.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.ku",
+                url:"/ku",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/ku.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.lnzt",
+                url:"/lnzt",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/lnzt.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.zjlx",
+                url:"/zjlx",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/zjlx.html"
+                    }
+                }
+            }).state({
+                name:"tabs.lianxi",
+                url:"/lianxi",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/lianxi.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.ml",
+                url:"/ml",
+                params:{name:null},
+                views:{
+                    "searchview": {
+                        templateUrl:"template/index/ml.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.renwu",
+                url:"/renwu",
+                views:{
+                    "renwuview":{
+                        templateUrl:"template/renwu/renwu.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.study",
+                url:"/study",
+                params:{name:null},
+                views:{
+                    "renwuview": {
+                        templateUrl:"template/renwu/study.html",
+                        controller:function($scope, $stateParams) {
+                            $scope.name = $stateParams.name;
+                        }
+                    }
+                }
+            }).state({
+            name:"tabs.video",
+            url:"/video",
+            params:{name:null},
+            views:{
+                "renwuview": {
+                    templateUrl:"template/renwu/video.html",
+                    controller:function($scope, $stateParams) {
+                        $scope.name = $stateParams.name;
+                    }
+                }
+            }
+        }).state({
+            name:"tabs.zuoti",
+            url:"/zuoti",
+            params:{name:null},
+            views:{
+                "renwuview": {
+                    templateUrl:"template/renwu/zuoti.html",
+                    controller:function($scope, $stateParams) {
+                        $scope.name = $stateParams.name;
+                    }
+                }
+            }
+        })
+            .state({
+                name:"tabs.free1",
+                url:"/free1",
+                views:{
+                    "free1view":{
+                        templateUrl:"template/free/free1.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.free2",
+                url:"/free2",
+                views:{
+                    "free1view":{
+                        templateUrl:"template/free/free2.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.center",
+                url:"/center",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/center.html",
+                        controller: ["$scope", "$ionicPopover", function ($scope, $ionicPopover) {
+
+                                $ionicPopover.fromTemplateUrl("template/share/share.html",
+                                        {
+                                            scope: $scope,
+                                            animate: "slide-in-up"
+                                        })
+                                        .then(function (modal) {
+                                            $scope.dialog = modal;
+                                        });
+                                $scope.share = function ($event) {
+                                    $scope.dialog.show($event)
+                                }
+                                $scope.close=function($event){
+                                    $scope.dialog.hide()
+                                }
+                            }]
+                    }
+                }
+            }).state({
+                name:"tabs.tiku",
+                url:"/tiku",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/tiku.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.dianzishu",
+                url:"/dianzishu",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/dianzishu.html"
+                    }
+                }
+            }).state({
+                name:"tabs.jilu",
+                url:"/jilu",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/jilu.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.xq",
+                url:"/xq",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/xq.html"
+                    }
+                }
+            })
+            .state({
+                name:"tabs.shopcard",
+                url:"/shopcard",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/shopcard.html",
+                        controller:function ($scope,$ionicPopup) {
+				        $scope.show=function(){
+								$ionicPopup.show({
+									title:"确认要删除这个宝贝吗？",
+									scope:$scope,
+									buttons:[
+									 {text:"取消", type:"button-light"},
+				                    {text:"确认", type:"button-light"}
+									]
+				})
+			}
+    }
+                    }
+                }
+            })
+            .state({
+                name:"tabs.setup",
+                url:"/setup",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/setup.html"
+                    }
+                }
+            }) .state({
+                name:"tabs.person",
+                url:"/person",
+                views:{
+                    "centerview":{
+                        templateUrl:"template/center/person.html"
+                    }
+                }
+            })
+    }]);
+</script>
+</html>

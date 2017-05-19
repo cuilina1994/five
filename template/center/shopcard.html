@@ -1,0 +1,175 @@
+
+
+    <style>
+        body{
+            background:
+                    #E4E4E4;
+        }
+        .list:first-child{
+            background: #fff;
+            padding-top: -8px;
+            margin-bottom: 20px;
+        }
+        .button.button-light {
+    		color:#057efc;
+    		min-height: 0;
+    		min-width: 0;
+    		width: 40px;
+    		height: 35px;
+    		line-height: 25px;
+    	}
+    	.my-btn{
+    		background-color: #FF5000;
+    	}
+    	 .button{
+    	background-color: rgb(224,224,224);
+	    height: 24px;
+	    width: 40px;
+	    min-height: 0;
+	    min-width: 0;
+	    line-height:24px;
+    }
+    .button.button-dark.button-clear{
+    	width: 108px;
+    }
+        .item{
+            border: 0;
+            height: 82px;
+            min-height: 0;
+          padding-top: 5px;
+        }
+        .item-checkbox{
+        	padding-left: 35px;
+        }
+        .item-checkbox .checkbox{
+        	margin-top: -42px;
+        	left: 0px;
+        	width: 30px;
+        	height: 30px;
+        }
+        .item-thumbnail-left{
+        	    width: 90%;
+			    margin-top: -82px;
+			    margin-left: 34px;
+        }
+        .item-thumbnail-left img{
+            height: 61px;
+        }
+        .item .p{
+            color:#000;
+        }
+        .item .pp{
+            margin: 25px 0 10px;
+            color: red;
+        }
+    
+     .bar>.button+.button:last-child{
+    	position: absolute;
+	    top: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	    width: 92px;
+    	height: 44px;
+    	background: #FFA500;
+    }
+    .my-ion-chec{
+    	/*padding: 0;*/
+    }
+    </style>
+<ion-view  hide-tabs="true">
+<ion-header-bar class="bar-positive">
+    <i class="button button-clear icon ion-ios-arrow-left" ui-sref="^.center"></i>
+    <h1 class="title">我的购物车</h1>
+</ion-header-bar>
+<!--中间-->
+<ion-content>
+	
+	<ion-list>
+      <ion-checkbox></ion-checkbox>
+        <ion-item class="item-thumbnail-left">
+            <img src="img/book11.png" alt="" style=" height: 60px;">
+            <p class="p">专业手绘插画，一对一视频教程细节图基本准则</p>
+            <p class="pp">￥34.12
+            <a><i class="button icon ion-minus" style="background-color: rgb(224,224,224);"></i>
+            		<button class="button button-stable">1</button>
+            		<i class="button ion-plus" style="background-color: rgb(224,224,224);"></i>
+            </a>
+            </p>
+            <ion-option-button class="button button-energized" style="width: 47px;" ng-click="show()">删除</ion-option-button>
+        </ion-item>
+      
+    </ion-list>
+    
+    <ion-list>
+      <ion-checkbox></ion-checkbox>
+        <ion-item class="item-thumbnail-left">
+            <img src="img/book12.png" alt="" style=" height: 60px;">
+            <p class="p">专业手绘插画，一对一视频教程细节图基本准则</p>
+            <p class="pp">￥66.78
+            <a><i class="button icon ion-minus" style="background-color: rgb(224,224,224);"></i>
+            		<button class="button button-stable">1</button>
+            		<i class="button ion-plus" style="background-color: rgb(224,224,224);"></i>
+            </a>
+            </p>
+           <ion-option-button class="button button-energized" style="width: 47px;" ng-click="show()">删除</ion-option-button> 
+        </ion-item>
+       
+    </ion-list>
+   
+    <ion-list>
+      <ion-checkbox> </ion-checkbox>
+        <ion-item class="item-thumbnail-left">
+            <img src="img/book13.png" alt="" style=" height: 60px;">
+            <p class="p">专业手绘插画，一对一视频教程细节图基本准则</p>
+            <p class="pp">￥78.89
+            <a><i class="button icon ion-minus" style="background-color: rgb(224,224,224);"></i>
+            		<button class="button button-stable">1</button>
+            		<i class="button ion-plus" style="background-color: rgb(224,224,224);"></i>
+            </a>
+            </p>
+            <ion-option-button class="button button-energized" style="width: 47px;" ng-click="show()">删除</ion-option-button>
+        </ion-item>
+     
+    </ion-list>
+    
+    <ion-list>
+      <ion-checkbox>  </ion-checkbox>
+        <ion-item class="item-thumbnail-left">
+            <img src="img/book14.png" alt="" style=" height: 60px;">
+            <p class="p">专业手绘插画，一对一视频教程细节图基本准则</p>
+            <p class="pp">￥34.2
+            <a><i class="button icon ion-minus" style="background-color: rgb(224,224,224);"></i>
+            		<button class="button button-stable">1</button>
+            		<i class="button ion-plus" style="background-color: rgb(224,224,224);"></i>
+            </a>
+            </p>
+            <ion-option-button class="button button-energized" style="width: 47px;" ng-click="show()">删除</ion-option-button>
+        </ion-item>
+    
+    </ion-list>
+</ion-content>
+<!--底部-->
+<!--<ion-footer-bar>
+	<ion-checkbox class="my-ion-chec">全选</ion-checkbox>
+        <button class="button button-clear button-dark ">合计：<span style="color: red">￥0.00</span></button>
+        <button class="button button-clear button-dark">不含运费</button>
+        <button class="button  button-energized my-btn">结算（0）</button>
+</ion-footer-bar>-->
+</ion-view>
+<!--<script>
+   var app=angular.module("myApp",["ionic"]);
+    app.controller("myCtrl",function ($scope,$ionicPopup) {
+        $scope.show=function(){
+				$ionicPopup.show({
+					title:"确认要删除这个宝贝吗？",
+					scope:$scope,
+					buttons:[
+					 {text:"取消", type:"button-light"},
+                    {text:"确认", type:"button-light"}
+					]
+				})
+			}
+    })
+</script>
+</html>-->
+	
